@@ -1,0 +1,51 @@
+﻿@*
+    @model UnderstandingControllersViews.Models.Person*@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    @{ 
+        var p = ViewData["Person"] as UnderstandingControllersViews.Models.Person;
+    }
+
+    <div>
+        Name: @p.name
+    </div>
+    <div>
+        Sex: @p.sex
+    </div>
+
+@*<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sex)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+    </dl>
+</div>*@
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
