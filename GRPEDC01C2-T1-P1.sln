@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnderstandingControllersViews", "UnderstandingControllersViews\UnderstandingControllersViews.csproj", "{38617E0E-831F-401B-B916-F23E16980D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeCrudMvc", "EmployeeCrudMvc\EmployeeCrudMvc.csproj", "{9B08B1DD-F1F9-42DA-BDF7-D15160FB8560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeCrudMvc", "EmployeeCrudMvc\EmployeeCrudMvc.csproj", "{9B08B1DD-F1F9-42DA-BDF7-D15160FB8560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSchool", "AppSchool\AppSchool.csproj", "{775EE22C-0436-4D49-877E-5CCA75AD4CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9B08B1DD-F1F9-42DA-BDF7-D15160FB8560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B08B1DD-F1F9-42DA-BDF7-D15160FB8560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B08B1DD-F1F9-42DA-BDF7-D15160FB8560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775EE22C-0436-4D49-877E-5CCA75AD4CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775EE22C-0436-4D49-877E-5CCA75AD4CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775EE22C-0436-4D49-877E-5CCA75AD4CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775EE22C-0436-4D49-877E-5CCA75AD4CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
