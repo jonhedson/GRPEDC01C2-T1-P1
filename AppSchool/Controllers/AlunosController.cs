@@ -29,13 +29,13 @@ namespace AppSchool.Controllers
         {
             return View();
         }
-
+        
         // POST: AlunosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Aluno aluno)
         {
-            Aluno aluno = (Aluno) collection;
+            
             AlunoRepository.Create(aluno);
 
             return RedirectToAction(nameof(Index));
@@ -45,16 +45,19 @@ namespace AppSchool.Controllers
         // GET: AlunosController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(AlunoRepository.BuscarId(id));
         }
 
         // POST: AlunosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Aluno aluno)
         {
             try
             {
+
+                AlunoRepository.Edit(id, aluno);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -66,7 +69,7 @@ namespace AppSchool.Controllers
         // GET: AlunosController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(AlunoRepository.BuscarId(id));
         }
 
         // POST: AlunosController/Delete/5
@@ -76,6 +79,8 @@ namespace AppSchool.Controllers
         {
             try
             {
+                AlunoRepository.Delete(id);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

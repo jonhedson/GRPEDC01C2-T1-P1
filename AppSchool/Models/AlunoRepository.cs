@@ -57,7 +57,65 @@ namespace AppSchool.Models
         }
         #endregion
 
+        #region BuscarId
+        public static Aluno BuscarId(int id)
+        {
+            Aluno resultado = new Aluno();
+
+                foreach (Aluno a in allAlunos)
+            {
+                if (a.AlunoId == id)
+                {
+                    resultado.AlunoId = a.AlunoId;
+                    resultado.Nome = a.Nome;
+                    resultado.Campus = a.Campus;
+                    resultado.Curso = a.Curso;
+                    resultado.Sexo = a.Sexo;
+                    break;
+                }
+            }
+            return resultado;
+        }
+        #endregion
+
+        #region Edit
+        public static void Edit(int id, Aluno alunoUpdate)
+        {
+            foreach (Aluno a in allAlunos)
+            {
+                if(a.AlunoId == id)
+                {
+                    a.Nome = alunoUpdate.Nome;
+                    a.Campus = alunoUpdate.Campus;
+                    a.Curso = alunoUpdate.Curso;
+                    a.Sexo = alunoUpdate.Sexo;
+                    break;
+                }
+            }
+        }
+
+        #endregion
+
+        public static void Delete(int id)
+        {
+            foreach(Aluno a in allAlunos)
+            {
+                if (a.AlunoId == id)
+                {
+                    allAlunos.Remove(a);
+                    break;
+                }
+            }
+        }
+
+        #region Busca TP3
+        // Busca por Nome
+        public static List<Aluno> BuscarAluno(string pesquisa)
+        {
+            a.Nome.Contains(pesquisa);
+        }
+        #endregion
     }
 
-    
+
 }
