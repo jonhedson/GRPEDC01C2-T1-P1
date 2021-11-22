@@ -109,11 +109,11 @@ namespace AppSchool.Models
         }
 
         #region Busca TP3
-        // Busca por Nome
-        public static List<Aluno> BuscarAluno(string pesquisa)
-        {
-            a.Nome.Contains(pesquisa);
-        }
+        //// Busca por Nome
+        //public static List<Aluno> BuscarAluno(string pesquisa)
+        //{
+        //    a.Nome.Contains(pesquisa);
+        //}
         #endregion
     }
 
